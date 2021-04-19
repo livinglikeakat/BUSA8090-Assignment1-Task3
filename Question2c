@@ -1,0 +1,4 @@
+select m.LastName, m.FirstName, m.MemberID from Member m inner join
+(select distinct MemberID from Entry where MemberID NOT IN
+(select distinct MemberID from Entry e where e.Year='2013')) NewTable
+on m.MemberID=NewTable.MemberID;
