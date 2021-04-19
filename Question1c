@@ -1,0 +1,2 @@
+sort annotation.tab > sorted-anno.tab
+join -t$’/t’ -o 1.1,1.2,2.2,1.3 sorted-anno.tab expression.tab > result.tab
